@@ -1,4 +1,4 @@
-## Module Data.String.Colors
+## Module Data.String.Color
 
 Output colorized string in terminal. 
 

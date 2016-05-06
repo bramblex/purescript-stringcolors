@@ -1,4 +1,4 @@
-module Data.String.Colors
+module Data.String.Color
        (bold
        ,dim
        ,italic
