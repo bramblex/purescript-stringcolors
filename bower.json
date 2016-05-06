@@ -8,6 +8,7 @@
         "output"
     ],
     "dependencies": {
+        "purescript-prelude": "^0.1.0"
     },
     "repository": {
         "type": "git",
