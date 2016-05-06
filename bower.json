@@ -8,10 +8,9 @@
         "output"
     ],
     "dependencies": {
-        "purescript-console": "^0.1.0"
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/purescript/purescript-prelude.git"
+        "url": "git://github.com/bramblex/purescript-stringcolors.git"
     }
 }

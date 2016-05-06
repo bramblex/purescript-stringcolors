@@ -1,10 +1,13 @@
 module Data.String.Colors
        (bold
        ,dim
+       ,italic
        ,underlined
        ,blink
+       ,overline
        ,reverse
        ,hidden
+       ,strikeout
 
        ,black
        ,red
@@ -22,6 +25,7 @@ module Data.String.Colors
        ,lightMagenta
        ,lightCyan
        ,white
+
        ,bgBlack
        ,bgRed
        ,bgGreen
@@ -49,18 +53,24 @@ resetAll="\x1B[0m"
 -- Set Text Style --
 setBold="\x1B[1m"
 setDim="\x1B[2m"
+setItalic="\x1B[3m"
 setUnderlined="\x1B[4m"
 setBlink="\x1B[5m"
+setOverline="\x1B[6m"
 setReverse="\x1B[7m"
 setHidden="\x1B[8m"
+setStrikeout="\x1B[9m"
 
 -- Reset Text Style --
-resetBold="\x1B[21m"
+resetBold="\x1B[22m"
 resetDim="\x1B[22m"
+resetItalic="\x1B[23m"
 resetUnderlined="\x1B[24m"
 resetBlink="\x1B[25m"
+resetOverline="\x1B[26m"
 resetReverse="\x1B[27m"
 resetHidden="\x1B[28m"
+resetStrikeout="\x1B[29m"
 
 -- Reset Foreground/Background Color --
 resetColor="\x1B[39m"
@@ -106,13 +116,15 @@ setColor256 nu ="\x1B[38;5;"++ show nu ++ "m"
 setBackground256 nu ="\x1B[48;5;" ++ show nu ++ "m"
 
 -- Interface --
-
 bold str = setBold ++ str ++ resetBold
 dim str = setDim ++ str ++ resetDim
+italic str = setItalic ++ str ++ resetItalic
 underlined str = setUnderlined ++ str ++ resetUnderlined
 blink str = setBlink ++ str ++ resetBlink
+overline str = setOverline ++ str ++ resetOverline
 reverse str = setReverse ++ str ++ resetReverse
 hidden str = setHidden ++ str ++ resetHidden
+strikeout str = setStrikeout ++ str ++ resetStrikeout
 
 black str = setBlack ++ str ++ resetColor
 red str = setRed ++ str ++ resetColor
